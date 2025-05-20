@@ -1,4 +1,4 @@
-NAME=scaffolding
+NAME=crypt
 BINARY=packer-plugin-${NAME}
 
 COUNT?=1

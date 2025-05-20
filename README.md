@@ -35,7 +35,7 @@ Looking at their code will give you good examples.
 
 2. Run this command from the root directory: 
 ```shell 
-go build -ldflags="-X github.com/hashicorp/packer-plugin-scaffolding/version.VersionPrerelease=dev" -o packer-plugin-scaffolding
+go build -ldflags="-X github.com/robbert229/packer-plugin-crypt/version.VersionPrerelease=dev" -o packer-plugin-scaffolding
 ```
 
 3. After you successfully compile, the `packer-plugin-scaffolding` plugin binary file is in the root directory. 
