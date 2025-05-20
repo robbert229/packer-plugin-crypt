@@ -1,8 +1,9 @@
 
 version: 2
 
+# this happens to rely on cgo at the moment.
 env:
-  - CGO_ENABLED=0
+  - CGO_ENABLED=1
 before:
   hooks:
     # We strongly recommend running tests to catch any regression before release.
@@ -34,18 +35,18 @@ builds:
     ldflags:
       - '-s -w -X {{ .ModulePath }}/version.Version={{.Version}} -X {{ .ModulePath }}/version.VersionPrerelease= '
     goos:
-      - netbsd
-      - solaris
-      - openbsd
-      - freebsd
-      - windows
+      # - netbsd
+      # - solaris
+      # - openbsd
+      # - freebsd
+      # - windows
       - linux
-      - darwin
+      # - darwin
     goarch:
       - amd64
-      - '386'
-      - arm
-      - arm64
+      # - '386'
+      # - arm
+      # - arm64
     ignore:
       - goos: openbsd
         goarch: arm64
